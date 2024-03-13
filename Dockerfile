@@ -1,5 +1,5 @@
 # Kies een base image
-FROM node:14
+FROM node:16
 
 # Stel de werkdirectory in de container in
 WORKDIR /usr/src/app
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Definieer het commando om de app te starten
-CMD [ "node", "app.js" ]
+CMD ["npm", "start"]
