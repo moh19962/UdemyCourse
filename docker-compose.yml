@@ -6,12 +6,12 @@ services:
       - '3000:3000'
     environment:
       PORT: 3000
-      MONGODB_URI: mongodb://mongo_db:27017/
+      MONGODB_URI: mongodb://mongo:27017/
       DB_NAME: my_db
     depends_on:
-      - mongo_db
+      - mongo
 
-  mongo_db:
+  mongo:
     image: mongo:latest
     restart: always
     volumes:
