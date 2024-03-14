@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  4-natours:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      PORT: 3000
+      MONGODB_URI: mongodb://mongo_db:27017/
+      DB_NAME: my_db
+    depends_on:
+      - mongo_db
+
+  mongo_db:
+    image: mongo:latest
+    restart: always
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:

@@ -14,7 +14,7 @@ const mongoUrl = 'mongodb://mijnMongoDB:27017';
 //     useFindAndModify: false,
 //   })
 mongoose
-  .connect(mongoUrl, {
+  .connect(process.env.DATABASE_LOCAL, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,

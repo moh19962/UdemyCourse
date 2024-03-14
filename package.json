@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js",
+    "dev": "nodemon --legacy-watch server.js",
     "start:prod": "cross-env NODE_ENV=production node server.js"
   },
   "author": "Mohammad Parwani",
